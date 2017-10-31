@@ -5,16 +5,16 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  app:any ={nom: String, version: Number};
+  app: App;
 
   constructor(public navCtrl: NavController) {
-    //app = new App;
-    this.app.nom = "nomApp";
-    this.app.version = 0.1;
+    this.app = new App("nom",0.1);
+    //this.app.nom = "nomApp";
+    //this.app.version = 0.1;
   }
-  //function changeName() {
-  //  this.app.nom = "nom modifié";
-  //}
+  changeName() {
+    console.log("Clic!");
+  }
 }
 
  class App {
