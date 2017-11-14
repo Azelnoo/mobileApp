@@ -9,6 +9,8 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    GeolocPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -27,6 +30,7 @@ import {Camera, CameraOptions} from '@ionic-native/camera';
     ListPage
   ],
   providers: [
+    Geolocation,
     StatusBar,
     Camera,
     SplashScreen,

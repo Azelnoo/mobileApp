@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {Camera, CameraOptions} from '@ionic-native/camera';
+import { Geolocation } from '@ionic-native/geolocation';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,9 +14,10 @@ export class HomePage {
     //this.app.nom = "nomApp";
     //this.app.version = 0.1;
   }
-  changeName() {
+  ClicMe() {
     console.log("Clic!");
   }
+
   takePic(){
   const options: CameraOptions = {
     quality: 100,
@@ -32,6 +34,7 @@ export class HomePage {
     });
   }
 }
+
 
  class App {
 constructor(public nom: String,public version: Number){
