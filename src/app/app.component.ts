@@ -3,11 +3,15 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Toast } from '@ionic-native/toast';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+//import { Vibration } from '@ionic-native/vibration';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { GeolocPage } from '../pages/geoloc/geoloc';
 import { ToasterPage } from '../pages/toaster/toaster';
+import { TtsPage } from '../pages/tts/tts';
+//import { VibrationPage } from '../pages/vibration/vibration';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +31,9 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Géolocalisation', component: GeolocPage },
-      { title: 'Disguised Toast', component: ToasterPage }
+      { title: 'Disguised Toast', component: ToasterPage },
+      { title: 'Text To Speech', component: TtsPage },
+      //{ title: 'Vibration', component: VibrationPage }
 
     ];
 

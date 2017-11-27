@@ -6,14 +6,22 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 
+// Ionic Imports
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import { Toast } from '@ionic-native/toast';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+//import { Vibration } from '@ionic-native/vibration';
 
+//page imports
 import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
 import { ToasterPageModule } from '../pages/toaster/toaster.module';
 import { Geolocation } from '@ionic-native/geolocation';
+import { TtsPageModule } from '../pages/tts/tts.module';
+//import { VibrationPageModule } from '../pages/vibration/vibration.module';
+
+
 
 @NgModule({
   declarations: [
@@ -26,6 +34,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     IonicModule.forRoot(MyApp),
     GeolocPageModule,
     ToasterPageModule,
+    TtsPageModule,
+    //VibrationPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,6 +46,8 @@ import { Geolocation } from '@ionic-native/geolocation';
   providers: [
     Toast,
     Geolocation,
+    //Vibration,
+    TextToSpeech,
     StatusBar,
     Camera,
     SplashScreen,

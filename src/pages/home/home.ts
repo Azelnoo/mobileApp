@@ -10,9 +10,7 @@ export class HomePage {
   app: App;
 
   constructor(public navCtrl: NavController,private camera: Camera) {
-    this.app = new App("nom",0.1);
-    //this.app.nom = "nomApp";
-    //this.app.version = 0.1;
+    this.app = new App("Nom Application",1.42);
   }
   ClicMe() {
     console.log("Clic!");
