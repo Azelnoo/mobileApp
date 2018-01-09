@@ -2,8 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Toast } from '@ionic-native/toast';
-import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+//import { Toast } from '@ionic-native/toast';
+//import { TextToSpeech } from '@ionic-native/text-to-speech';
 //import { Vibration } from '@ionic-native/vibration';
 
 import { HomePage } from '../pages/home/home';
@@ -11,7 +12,8 @@ import { ListPage } from '../pages/list/list';
 import { GeolocPage } from '../pages/geoloc/geoloc';
 import { ToasterPage } from '../pages/toaster/toaster';
 import { TtsPage } from '../pages/tts/tts';
-//import { VibrationPage } from '../pages/vibration/vibration';
+import { VibrationPage } from '../pages/vibration/vibration';
+import { PhotoPageModule } from '../pages/photo/photo.module';
 
 @Component({
   templateUrl: 'app.html'
@@ -33,7 +35,7 @@ export class MyApp {
       { title: 'Géolocalisation', component: GeolocPage },
       { title: 'Disguised Toast', component: ToasterPage },
       { title: 'Text To Speech', component: TtsPage },
-      //{ title: 'Vibration', component: VibrationPage }
+      { title: 'Vibration', component: VibrationPage }
 
     ];
 

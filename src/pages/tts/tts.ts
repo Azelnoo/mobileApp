@@ -17,10 +17,9 @@ export class TtsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private tts: TextToSpeech) {
   }
+  texttospeech(txt: string){
 
-  texttospeech(){
-
-    this.tts.speak('First rule of fight club, YOU DO NOT TALK ABOUT FIGHT CLUB !')
+    this.tts.speak(txt)
     .then(() => console.log('Success'))
     .catch((reason: any) => console.log(reason));
 

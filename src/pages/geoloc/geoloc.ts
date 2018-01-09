@@ -9,10 +9,6 @@ import { Geolocation } from '@ionic-native/geolocation';
  * Ionic pages and navigation.
  */
 
-/* class location{
- contructor (public lat:number=0, public: long:number=0)
-}*/
-
 @IonicPage()
 @Component({
   selector: 'page-geoloc',
@@ -26,18 +22,6 @@ public latitude:Number; public longitude:Number;
        this.showGPS();
 
   }
-/*
-  showGPS(){
-     this.geolocation.getCurrentPosition().then((resp) => {
-        this.latitude = resp.coords.latitude;
-        this.longitude = resp.coords.longitude;
-        console.log(latitude)
-        console.log(longitude)
-       }).catch((error) => {
-         console.log('Error getting location', error)
-       });
-     }
-     */
   showGPS(){
    let watch = this.geolocation.watchPosition();
     watch.subscribe((data) => {
@@ -48,13 +32,6 @@ public latitude:Number; public longitude:Number;
     console.log(this.longitude);
   });
   }
-
-    /* let watch = this.geolocation.watchPosition();
-watch.subscribe((data) => {
- // data can be a set of coordinates, or an error (if an error occurred).
- // data.coords.latitude
- // data.coords.longitude*/
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad GeolocPage')
   }

@@ -12,14 +12,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {Camera, CameraOptions} from '@ionic-native/camera';
 import { Toast } from '@ionic-native/toast';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-//import { Vibration } from '@ionic-native/vibration';
+import { Vibration } from '@ionic-native/vibration';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
 
 //page imports
 import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
 import { ToasterPageModule } from '../pages/toaster/toaster.module';
 import { Geolocation } from '@ionic-native/geolocation';
 import { TtsPageModule } from '../pages/tts/tts.module';
-//import { VibrationPageModule } from '../pages/vibration/vibration.module';
+import { VibrationPageModule } from '../pages/vibration/vibration.module';
+import { PhotoPageModule } from '../pages/photo/photo.module'; //base64toGallery
 
 
 
@@ -35,7 +37,8 @@ import { TtsPageModule } from '../pages/tts/tts.module';
     GeolocPageModule,
     ToasterPageModule,
     TtsPageModule,
-    //VibrationPageModule,
+    VibrationPageModule,
+    PhotoPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +49,8 @@ import { TtsPageModule } from '../pages/tts/tts.module';
   providers: [
     Toast,
     Geolocation,
-    //Vibration,
+    Vibration,
+    Base64ToGallery,
     TextToSpeech,
     StatusBar,
     Camera,

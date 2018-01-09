@@ -24,6 +24,13 @@ export class ToasterPage {
     console.log(toast);
   }  );
   };
+  
+  ToastImgSaved(){
+    this.toast.show(`Image Saved to Gallery`, '5000', 'center').subscribe(
+  toast => {
+    console.log(toast);
+  }  );
+  };
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ToasterPage');

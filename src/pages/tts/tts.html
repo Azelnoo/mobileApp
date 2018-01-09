@@ -14,7 +14,10 @@
 
 
 <ion-content padding>
-
-  <button ion-button (click)="texttospeech();" > Figth club</button>
+  <ion-item>
+    <ion-label floating>text to speak in english</ion-label><br/>
+    <ion-input type="text" [(ngModel)]="txt" ></ion-input>
+   </ion-item>
+  <button ion-button (click)="texttospeech(txt);" > Go !</button>
 
 </ion-content>

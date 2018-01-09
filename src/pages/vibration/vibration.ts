@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Vibration } from '@ionic-native/vibration';
 
 /**
  * Generated class for the VibrationPage page.
