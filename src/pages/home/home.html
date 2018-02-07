@@ -5,10 +5,19 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>{{app.nom}} {{app.version}} </h1>
+<!--  <h1>{{app.nom}} {{app.version}} </h1>
 
- <ion-item>
-    <ion-label floating>Nom</ion-label>
+ <ion-item>-->
+    <ion-label floating>Guess Who's Talking ?</ion-label>
+    <br/><br/>
+
+    <ion-col><button ion-button (click)="loadMap()">Load Map</button></ion-col>
+    <br/> 
+    <ion-col><button ion-button (click)="showGPS()">Locate me</button></ion-col>
+      <p>latitude : {{this.latitude}}</p>
+      <p>longitude : {{this.longitude}}</p>
+
+    <!--
     <ion-input type="text" [(ngModel)]="app.nom"></ion-input>
   </ion-item>
   <ion-item>
@@ -18,6 +27,6 @@
   <button ion-button (click)="ClicMe();">Click !</button>
 
   <button ion-button (click)="takePic();">Take Picture</button>
-
+-->
 
 </ion-content>

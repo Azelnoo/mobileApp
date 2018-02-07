@@ -14,15 +14,26 @@ import { Toast } from '@ionic-native/toast';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Vibration } from '@ionic-native/vibration';
 import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+import { Geolocation } from '@ionic-native/geolocation';
 
 //page imports
 import { GeolocPageModule } from '../pages/geoloc/geoloc.module';
 import { ToasterPageModule } from '../pages/toaster/toaster.module';
-import { Geolocation } from '@ionic-native/geolocation';
 import { TtsPageModule } from '../pages/tts/tts.module';
 import { VibrationPageModule } from '../pages/vibration/vibration.module';
 import { PhotoPageModule } from '../pages/photo/photo.module'; //base64toGallery
 
+//Google maps
+import {
+ GoogleMaps,
+ GoogleMap,
+ GoogleMapsEvent,
+ GoogleMapOptions,
+ CameraPosition,
+ MarkerOptions,
+ Marker
+} from '@ionic-native/google-maps';
+import { Component } from "@angular/core/";
 
 
 @NgModule({
@@ -55,6 +66,7 @@ import { PhotoPageModule } from '../pages/photo/photo.module'; //base64toGallery
     StatusBar,
     Camera,
     SplashScreen,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

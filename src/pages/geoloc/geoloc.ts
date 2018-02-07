@@ -19,8 +19,6 @@ public latitude:Number; public longitude:Number;
   constructor(public navCtrl: NavController, public navParams: NavParams,
      private geolocation: Geolocation,
      ) {
-       this.showGPS();
-
   }
   showGPS(){
    let watch = this.geolocation.watchPosition();
@@ -28,8 +26,6 @@ public latitude:Number; public longitude:Number;
     // data can be a set of coordinates, or an error (if an error occurred).
     this.latitude = data.coords.latitude;
     this.longitude = data.coords.longitude;
-    console.log(this.latitude);
-    console.log(this.longitude);
   });
   }
   ionViewDidLoad() {

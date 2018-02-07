@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tts</ion-title>
+    <ion-title>Guess Who's Talking</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,9 +15,47 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-label floating>text to speak in english</ion-label><br/>
-    <ion-input type="text" [(ngModel)]="txt" ></ion-input>
+    <ion-label floating>text to speak in the selected Language</ion-label><br/>
+    <ion-input type="text" [(ngModel)]="txt" ></ion-input> <br/>
    </ion-item>
-  <button ion-button (click)="texttospeech(txt);" > Go !</button>
+<!--<ion-item>
+   <ion-label floating>Language</ion-label><br/>
+   <ion-input type="lng" [(ngModel)]="lng" ></ion-input>
+ </ion-item> -->
+  <button ion-button (click)="texttospeech(txt,lng);" > Go !</button>
+  <button ion-button (click)="randomLanguage(txt,lng);" >Langue Aléatoire</button>
+  <button ion-button (click)="randomBonjour(txt,lng);" >Bonjour Aléatoire</button>
+  <br/><br/>
+<button ion-button (click)="texttospeech(txt,'en-US');" >anglais</button>
+<button ion-button (click)="texttospeech(txt,'fr-FR');" >français</button>
+<button ion-button (click)="texttospeech(txt,'fi-FI');" >finnois</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'ar-SA');" >arabie saoudite</button>
+<button ion-button (click)="texttospeech(txt,'zh-CN');" >chine</button>
+<button ion-button (click)="texttospeech(txt,'de-DE');" >allemand</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'ja-JP');" >japonais</button>
+<button ion-button (click)="texttospeech(txt,'ko-KR');" >coréen</button>
+<button ion-button (click)="texttospeech(txt,'es-ES');" >espagnol</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'af-ZA');" >sud africain</button>
+<button ion-button (click)="texttospeech(txt,'it-IT');" >italien</button>
+<button ion-button (click)="texttospeech(txt,'hi-IN');" >hindi</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'lt-LT');" >lithuanien</button>
+<button ion-button (click)="texttospeech(txt,'cs-CZ');" >tchèque</button>
+<button ion-button (click)="texttospeech(txt,'da-DK');" >Danois</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'pl-PL');" >polonais</button>
+<button ion-button (click)="texttospeech(txt,'pt-PT');" >portugais</button>
+<button ion-button (click)="texttospeech(txt,'ro-RO');" >roumain</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'ru-RU');" >russe</button>
+<button ion-button (click)="texttospeech(txt,'sk-SK');" >slovaque</button>
+<button ion-button (click)="texttospeech(txt,'sv-SE');" >suédois</button>
+<br/>
+<button ion-button (click)="texttospeech(txt,'tr-TR');" >turque</button>
+<button ion-button (click)="texttospeech(txt,'vi-VN');" >vietnamien</button>
+
 
 </ion-content>

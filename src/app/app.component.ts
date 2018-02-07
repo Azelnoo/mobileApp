@@ -31,10 +31,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
+      //{ title: 'List', component: ListPage },
       { title: 'Géolocalisation', component: GeolocPage },
       { title: 'Disguised Toast', component: ToasterPage },
-      { title: 'Text To Speech', component: TtsPage },
+      { title: "Guess who's Talking ?", component: TtsPage },
       { title: 'Vibration', component: VibrationPage }
 
     ];
